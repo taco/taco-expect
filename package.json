@@ -2,13 +2,13 @@
   "name": "taco-starter",
   "version": "1.0.0",
   "description": "Personal Starter package framework",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "ci": "npm run lint && npm test",
     "lint": "eslint ./src",
     "test": "karma start ./test/karma.conf.js --no-supress-error-summary",
     "test-watch": "npm test -- --no-single-run",
-    "prod": "webpack -p --config webpack/webpack.config.prod.js"
+    "build": "babel ./src -d ./lib"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/taco/taco-starter#readme",
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-eslint": "^6.0.5",
     "babel-loader": "^6.2.4",
     "babel-polyfill": "^6.9.1",
