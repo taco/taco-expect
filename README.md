@@ -1,5 +1,5 @@
-# taco-starter
+# taco-expect
 
-[![Build Status](https://travis-ci.org/taco/taco-starter.svg?branch=master)](https://travis-ci.org/taco/taco-starter)
+[![Build Status](https://travis-ci.org/taco/taco-expect.svg?branch=master)](https://travis-ci.org/taco/taco-expect)
 
-Placeholder app
+Extends [expect](https://github.com/mjackson/expect)

@@ -1,14 +1,42 @@
-import expect from 'expect';
-import test from './../src';
+import { fromJS } from 'immutable';
+import expect from './../src';
 
-/** @test {} */
-describe('Taco starter package', () => {
+describe('Taco Expect', () => {
 
-    /** @test {#} */
-    it('should have a default export with working tests', () => {
+    it('should have properly extended expect', () => {
         expect(
-            test()
-        ).toBe(true);
+            expect().toDeepEqual
+        ).toBeA('function');
+    });
+
+    it('should not throw errors with equal objects', () => {
+        expect(
+            { a: 1 }
+        ).toDeepEqual(
+            { a: 1 }
+        );
+        expect(
+            null
+        ).toDeepEqual(
+            null
+        );
+
+        expect(
+            fromJS([{ a: 1}, { b: 2 }])
+        ).toDeepEqual(
+            fromJS([{ a: 1}, { b: 2 }])
+        );
+    });
+
+    it('should throw an error on unequal objects', () => {
+
+        expect(() => {
+            expect(
+                fromJS([{ a: 1}, { b: 2 }])
+            ).toDeepEqual(
+                fromJS([{ a: 2}, { b: 2 }])
+            );
+        }).toThrow(/Diff/);
     });
 
 });

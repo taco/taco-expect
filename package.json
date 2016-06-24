@@ -1,5 +1,5 @@
 {
-  "name": "taco-starter",
+  "name": "taco-expect",
   "version": "1.0.0",
   "description": "Personal Starter package framework",
   "main": "./lib/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taco/js-starter.git"
+    "url": "git+https://github.com/taco/taco-expect.git"
   },
   "keywords": [
     "npm",
@@ -23,9 +23,9 @@
   "author": "Travis Johnson <tvjohnson@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/taco/taco-starter/issues"
+    "url": "https://github.com/taco/taco-expect/issues"
   },
-  "homepage": "https://github.com/taco/taco-starter#readme",
+  "homepage": "https://github.com/taco/taco-expect#readme",
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-eslint": "^6.0.5",
@@ -42,7 +42,6 @@
     "eslint-plugin-promise": "^1.3.2",
     "eslint-plugin-react": "^5.2.2",
     "eslint-plugin-require-path-exists": "^1.1.5",
-    "expect": "^1.20.1",
     "jasmine": "^2.4.1",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
@@ -65,5 +64,10 @@
     "stylint-stylish": "^1.3.2",
     "webpack": "^1.13.1",
     "yargs": "^4.7.1"
+  },
+  "dependencies": {
+    "deep-diff": "^0.3.4",
+    "expect": "^1.20.1",
+    "immutable": "^3.8.1"
   }
 }
